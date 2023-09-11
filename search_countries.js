@@ -224,6 +224,7 @@ var country_list = [
 ];
 
 onload = function () {
+  inputValues.autofocus;
   let input = "India";
   let url = `https://restcountries.com/v3.1/name/${input}?fullText=true`;
   console.log(url);
