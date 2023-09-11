@@ -313,8 +313,9 @@ function btnClick() {
     
 </div>`;
     });
-  inputValues.focus();
+
   inputValues.value = "";
+    inputValues.focus();
 }
 
 btn.addEventListener("click", btnClick);
