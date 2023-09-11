@@ -315,7 +315,6 @@ function btnClick() {
     });
 
   inputValues.value = "";
-    inputValues.focus();
 }
 
 btn.addEventListener("click", btnClick);
