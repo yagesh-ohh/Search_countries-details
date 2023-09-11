@@ -267,7 +267,7 @@ onload = function () {
     
 </div>`;
     });
-  inputValues.focus();
+  // inputValues.focus();
 };
 
 function btnClick() {
