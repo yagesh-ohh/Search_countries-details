@@ -239,6 +239,7 @@ onload = function () {
         .toString()
         .split(",")
         .join(", ");
+        console.log(languages);
       let capital = data[0].capital;
       let continents = data[0].continents;
       let currencies =
@@ -272,9 +273,26 @@ onload = function () {
 
 function btnClick() {
   let input = inputValues.value;
+  let check = input.charAt(0).toUpperCase() + input.substr(1);
   if (input == "") {
-    alert("Enter the correct Country Name");
+    alert("Enter the Country Name");
+  } 
+
+  for (let iterator of country_list) {
+
+    if (check == iterator) {
+      console.log(true);
+    gatherCountryData(input)
+
+    }
+  
   }
+
+  inputValues.value = "";
+}
+
+
+function gatherCountryData(input) {
   let url = `https://restcountries.com/v3.1/name/${input}?fullText=true`;
   console.log(url);
 
@@ -314,8 +332,6 @@ function btnClick() {
     
 </div>`;
     });
-
-  inputValues.value = "";
 }
 
 btn.addEventListener("click", btnClick);
